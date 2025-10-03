@@ -1,0 +1,6 @@
+ProductID,ProductName,Category,Stock,UnitPrice,Supplier
+PRD001,Keyboard Mechanical,Peripheral,25,350000,PT Tekno Jaya
+PRD002,Gaming Headset,Peripheral,15,500000,PT AudioMax
+PRD003,Wireless Mouse,Peripheral,30,150000,PT Klik Sentosa
+PRD004,Webcam HD,Camera,20,200000,PT VisionTech
+PRD005,USB Hub 4 Port,Accessory,40,80000,PT ConnectPro
