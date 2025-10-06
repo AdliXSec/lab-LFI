@@ -18,6 +18,7 @@
     <a href="level5.php?path=ZG9jcy9kb2t1bWVuLnR4dA==">Tingkat 5: Bypass Filter</a>
     <a href="level6.php">Tingkat 6: Image LFI</a>
     <a href="level7.php">Tingkat 7: Log Poisoning</a>
+    <a href="level8.php">Tingkat 8: Mudah Login Dulu</a>
     <hr>
     <p><b>Tujuan:</b> Baca isi file <code>secret/supersecret.txt</code> di setiap level.</p>
 </body>

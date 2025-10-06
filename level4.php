@@ -9,8 +9,8 @@
     <h1>Level 4: Pilih Laporan untuk Ditampilkan</h1>
     <form action="controller/level4.php" method="POST">
         <select name="report_id">
-            <option value="ZG9jcy9zYWxlcy50eHQ==">Laporan Penjualan</option>
-            <option value="ZG9jcy9pbnZlbnRvcnkudHh0">Laporan Inventaris</option>
+            <option value="ZG9jcy9zYWxlcy5odG1s">Laporan Penjualan</option>
+            <option value="ZG9jcy9pbnZlbnRvcnkuaHRtbA==">Laporan Inventaris</option>
         </select>
         <br><br>
         <input type="submit" value="Tampilkan Laporan">
