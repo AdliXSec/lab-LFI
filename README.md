@@ -24,37 +24,17 @@ Setiap level menyajikan skenario LFI yang unik, memaksa scanner Anda untuk berad
 
 ### Level 1: LFI Dasar (Basic LFI)
 
-* **Deskripsi**: Ini adalah bentuk LFI yang paling umum dan sederhana. Aplikasi mengambil nama file dari parameter URL tanpa validasi apa pun.
-* **Studi Kasus**: Eksploitasi menggunakan teknik *Path Traversal* sederhana.
-* **Parameter Rentan**: `page` (Metode GET)
-* **Contoh Payload**: `../../../../../../../../secret/supersecret.txt`
-
 ---
 
 ### Level 2: LFI dengan Input Base64
-
-* **Deskripsi**: Aplikasi mengharapkan input yang di-encode menggunakan Base64 untuk menyembunyikan path file.
-* **Studi Kasus**: Payload *Path Traversal* harus di-encode ke Base64 sebelum dikirim.
-* **Parameter Rentan**: `doc` (Metode GET)
-* **Contoh Payload**: `../../../../secret/supersecret.txt` di-encode menjadi `Li4vLi4vLi4vLi4vc2VjcmV0L3N1cGVyc2VjcmV0LnR4dA==`
 
 ---
 
 ### Level 3: Bypass dengan Null Byte
 
-* **Deskripsi**: Aplikasi menambahkan ekstensi file (misalnya `.php`) ke input pengguna di sisi server. Hal ini dilakukan untuk membatasi inklusi hanya pada tipe file tertentu.
-* **Studi Kasus**: Teknik *Null Byte Injection* (`%00`) digunakan untuk memotong string ekstensi tambahan dari server.
-* **Parameter Rentan**: `module` (Metode GET, input di-encode Base64)
-* **Contoh Payload**: `../../../../secret/supersecret.txt%00` di-encode ke Base64.
-* **Catatan**: Teknik ini mungkin tidak berfungsi pada versi PHP yang lebih baru (> 5.3.4).
-
 ---
 
 ### Level 4: LFI via Metode POST
-
-* **Deskripsi**: Kerentanan LFI tidak selalu berada di parameter GET yang terlihat di URL. Level ini menyembunyikan parameter rentan di dalam request body (POST).
-* **Studi Kasus**: Scanner harus mampu mendeteksi dan menguji parameter yang dikirim melalui metode POST.
-* **Petunjuk**: Periksa source code halaman `level4.php` untuk menemukan nama parameter yang digunakan di dalam form.
 
 ---
 
@@ -71,6 +51,8 @@ Setiap level menyajikan skenario LFI yang unik, memaksa scanner Anda untuk berad
 ---
 
 ### Level 8: Authenticated LFI (LFI setelah Login)
+
+---
 
 ## 🛠️ Penggunaan untuk Pengembangan Scanner
 
