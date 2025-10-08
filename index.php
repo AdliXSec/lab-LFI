@@ -19,6 +19,8 @@
     <a href="level6.php">Tingkat 6: Image LFI</a>
     <a href="level7.php">Tingkat 7: Log Poisoning</a>
     <a href="level8.php">Tingkat 8: Mudah Login Dulu</a>
+    <a href="level9.php">Tingkat 9: Replace?</a>
+    <a href="level10.php">Tingkat 10: Replace?, Filter?</a>
     <hr>
     <p><b>Tujuan:</b> Baca isi file <code>secret/supersecret.txt</code> di setiap level.</p>
 </body>
