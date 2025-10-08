@@ -21,6 +21,7 @@
     <a href="level8.php">Tingkat 8: Mudah Login Dulu</a>
     <a href="level9.php">Tingkat 9: Replace?</a>
     <a href="level10.php">Tingkat 10: Replace?, Filter?</a>
+    <a href="level11.php">Tingkat 11: Iframe</a>
     <hr>
     <p><b>Tujuan:</b> Baca isi file <code>secret/supersecret.txt</code> di setiap level.</p>
 </body>

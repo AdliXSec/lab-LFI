@@ -60,37 +60,17 @@ Setiap level menyajikan skenario LFI yang unik, memaksa scanner Anda untuk berad
 
 ### Level 5: Bypass Filter Path Traversal
 
-* **Deskripsi**: Aplikasi memiliki mekanisme keamanan sederhana yang mencoba menghapus atau memblokir sekuens `../` dari input.
-* **Studi Kasus**: Diperlukan teknik bypass filter, seperti menggunakan `....//` atau variasi encoding URL untuk mengelabui filter.
-* **Parameter Rentan**: `path` (Metode GET, input di-encode Base64)
-* **Contoh Payload**: `....//....//....//....//secret/supersecret.txt`
-
 ---
 
 ### Level 6: LFI via Image Path
-
-* **Deskripsi**: Kerentanan terjadi pada fungsionalitas yang seharusnya hanya memuat file gambar. Mungkin ada validasi ekstensi file yang lemah.
-* **Studi Kasus**: Mengeksploitasi fitur yang memvalidasi ekstensi file, sering kali dikombinasikan dengan teknik lain seperti *Null Byte*.
-* **Petunjuk**: Temukan cara agar aplikasi menyertakan file teks rahasia meskipun ia mengharapkan path menuju sebuah gambar.
 
 ---
 
 ### Level 7: LFI to RCE via Log Poisoning
 
-* **Deskripsi**: Level ini menunjukkan bagaimana LFI dapat ditingkatkan menjadi *Remote Code Execution* (RCE). Penyerang dapat menyisipkan kode PHP ke dalam file log server.
-* **Studi Kasus**:
-    1.  Sisipkan kode PHP (misalnya, `<?php system($_GET['cmd']); ?>`) ke dalam log server (misalnya, melalui User-Agent header).
-    2.  Gunakan kerentanan LFI untuk menyertakan file log tersebut.
-    3.  Eksekusi perintah pada server.
-* **Petunjuk**: Anda perlu menemukan path ke file log Apache (`/var/log/apache2/access.log`, `C:/xampp/apache/logs/access.log`, dll.) dan menyertakannya.
-
 ---
 
 ### Level 8: Authenticated LFI (LFI setelah Login)
-
-* **Deskripsi**: Kerentanan LFI tidak selalu dapat diakses secara publik. Terkadang, kerentanan ini hanya ada di halaman yang memerlukan otentikasi.
-* **Studi Kasus**: Scanner harus dapat mengelola sesi atau token otentikasi untuk memindai halaman-halaman internal.
-* **Petunjuk**: Level ini memiliki halaman login yang sangat sederhana. Cari tahu kredensialnya (mungkin sangat umum), login, lalu temukan kerentanan LFI di dalam area admin.
 
 ## 🛠️ Penggunaan untuk Pengembangan Scanner
 
