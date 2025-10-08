@@ -54,6 +54,18 @@ Setiap level menyajikan skenario LFI yang unik, memaksa scanner Anda untuk berad
 
 ---
 
+### Level 9: Login Replace
+
+---
+
+### Level 10: Replace? Filter?
+
+---
+
+### Level 11: IFrame
+
+---
+
 ## 🛠️ Penggunaan untuk Pengembangan Scanner
 
 Lab ini sangat ideal untuk menguji fitur-fitur berikut pada LFI scanner Anda:
